@@ -1,5 +1,5 @@
 {
-  "presets": ["es2015", "stage-0", "react"],
+  "presets": ["stage-0", "react"],
   "plugins": ["transform-runtime","react-hot-loader/babel"],
   "env": {
     "production": {

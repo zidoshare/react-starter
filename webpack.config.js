@@ -22,13 +22,14 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const rootPath = path.resolve(__dirname)
 const srcPath = path.join(rootPath, 'src')
+
 const env = process.env.NODE_ENV.trim()
 const isDev = (env === 'development')
 
 const common = {
   rootPath: rootPath,
   srcPath: srcPath,
-  public: path.join(rootPath, 'dist'),
+  dist: path.join(rootPath, 'dist'),
   indexHtml: path.join(srcPath, 'index.html'),
   staticDir: path.join(rootPath, 'static'),
 }
@@ -114,9 +115,12 @@ function handleStyle(plugin, list) {
 const webpackConfig = {
   entry: common.entry,
   output: {
-    path: common.public,
+    filename:'bundle.js',
+    path: common.dist,
     publicPath: '/', //让HMR知道在哪里加载热更新块所必需的
   },
+  context:path.resolve(__dirname, 'src'),
+  devtool: 'inline-source-map',
   module: {
     //webpack1.0中可以省略 '-loader'，但是官方说法为了有明确的区分，在webpack2.0中，不能再省略
     rules: [{
@@ -197,11 +201,16 @@ const webpackConfig = {
   })(),
 }
 if (isDev) {
-  webpackConfig.context = path.resolve(__dirname, 'src')
   webpackConfig.devServer = {
     hot: true,
     contentBase: path.resolve(__dirname, 'dist'),
     publicPath: '/',
+    clientLogLevel: "none",//日志
+    compress: true,//压缩
+    stats:{
+      colors:true,
+      
+    }
   }
 }
 
