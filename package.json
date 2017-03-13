@@ -5,11 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server",
-    "build": "npm run clean && cross-env NODE_ENV=production webpack --progress --colors --config",
+    "build": "npm run clean && cross-env NODE_ENV=production webpack --progress --colors",
     "lint": "eslint app",
-    "clean": "rimraf dist/*",
-    "test": "mocha --recursive --compilers js:babel-core/register --require ./test/setup.js",
-    "test:watch": "npm run test -- --watch"
+    "clean": "rimraf dist/*"
   },
   "author": "",
   "license": "ISC",

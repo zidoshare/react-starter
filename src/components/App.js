@@ -1,10 +1,10 @@
-import React from 'react';
-import styles from './App.css';
+import React from 'react'
+import styles from './App.css'
 
 const App = () => (
   <div className={ styles.app }>
-    <h2>Hello, world!!!</h2>
+    <span>Hello, world!!!</span>
   </div>
 )
 
-export default App;
+export default App
