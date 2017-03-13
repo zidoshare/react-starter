@@ -98,10 +98,9 @@ const styleLoaders = {
 }
 
 function handleStyle(plugin, list) {
-  //如果是开发模式，删除数组中的第一个元素
-  if (isDev) 
+  //如果不是开发模式，删除数组中的第一个元素，并使用extrat-plugin将样式额外打包
+  if (!isDev) {
     list.splice(0, 1)
-  else {
     return plugin.extract(list)
   }
   return list
@@ -132,7 +131,7 @@ const webpackConfig = {
           //failOnWarning: false, failOnError: true,
           useEslintrc: false,
           // configFile: path.join(__dirname, "eslint_conf.js")
-          configFile: path.join(__dirname,'.eslintrc.json')
+          configFile: path.join(__dirname, '.eslintrc.json')
         }
       }, {
         test: /\.(js|jsx)$/,
