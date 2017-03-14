@@ -28,10 +28,10 @@
             "error",
             2
         ],//tab占两个空格
-        "linebreak-style": [
-            "error",
-            "windows"
-        ],
+        // "linebreak-style": [
+        //     "error",
+        //     "windows"
+        // ], 使用windows结束符
         "quotes": [
             "error",
             "single"
