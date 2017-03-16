@@ -3,13 +3,7 @@ import QueueAnim from 'rc-queue-anim'
 import TweenOne from 'rc-tween-one'
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack'
 
-Content.propTypes = {
-  id: React.PropTypes.string,
-  className: React.PropTypes.string
-}
-Content.defaultProps = {
-  className: 'content1'
-}
+
 class Content extends React.Component {
 
   render() {
@@ -54,6 +48,14 @@ class Content extends React.Component {
       </div>
     )
   }
+}
+
+Content.propTypes = {
+  id: React.PropTypes.string,
+  className: React.PropTypes.string
+}
+Content.defaultProps = {
+  className: 'content1'
 }
 
 export default Content

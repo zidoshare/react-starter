@@ -1,6 +1,5 @@
 import React from 'react'
 
-import Nav from './Nav'
 import Content0 from './Content0'
 import Content1 from './Content1'
 import Content2 from './Content2'
@@ -14,7 +13,6 @@ export default class Home extends React.Component {
 
   render() {
     const children = [
-      <Nav id="Nav" key="Nav"/>,
       <Content0 id="Content0" key="Content0"/>,
       <Content1 id="Content1" key="Content1"/>,
       <Content2 id="Content2" key="Content2"/>,
@@ -22,7 +20,7 @@ export default class Home extends React.Component {
       <Footer id="Footer" key="Footer"/>,
     ]
     return (
-    <div className="templates-wrapper" style={{ fontSize: 16, color: 'white' }} ref="kkkk">
+    <div >
       {children}
     </div>
     )

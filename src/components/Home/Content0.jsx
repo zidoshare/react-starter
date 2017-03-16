@@ -47,7 +47,7 @@ class Content extends React.Component {
 }
 
 Content.propTypes = {
-  className: PropTypes.string,
+  className: PropTypes.string
 }
 
 Content.defaultProps = {
