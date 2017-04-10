@@ -267,7 +267,7 @@ if ( isDev ) {
     },
     proxy:{
       '/api/*':{
-        target: 'http://localhost',
+        target: 'http://localhost:8080',
         changeOrigin: true,
         secure: false,
       }
