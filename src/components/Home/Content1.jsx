@@ -11,7 +11,6 @@ class Content extends React.Component {
       <div {...this.props} className="content-template-wrapper content-half-wrapper">
         <OverPack
           className={`content-template ${this.props.className}`}
-          hideProps={{img: {reverse: true}}}
           location={this.props.id}>
           <TweenOne
             key="img"

@@ -125,14 +125,6 @@ class Content extends React.Component {
       <div {...this.props} className="content-template-wrapper">
         <OverPack
           className={`content-template ${this.props.className}`}
-          hideProps={{
-            h1: {
-              reverse: true
-            },
-            p: {
-              reverse: true
-            }
-          }}
           location={this.props.id}>
           <TweenOne key="h1" animation={titleAnim} component="h1">
             蚂蚁金融云提供专业的服务
