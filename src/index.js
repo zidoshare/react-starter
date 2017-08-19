@@ -14,9 +14,9 @@ let render = () => {
 }
 
 if ( isDev ) {
-  if ( window.devToolsExtension ) {
-    window.devToolsExtension.open()
-  }
+  // if ( window.devToolsExtension ) {
+  //   window.devToolsExtension.open()
+  // }
 }
 
 if ( isDev ) {
