@@ -52,7 +52,7 @@ export default class App extends React.Component{
                 <img src={logo}/>
               </li>
               <li>
-                创源地文化传播有限公司
+                demo
               </li>
             </ul>
             <Menu 
@@ -63,11 +63,11 @@ export default class App extends React.Component{
               className="nav"
             >
               <MenuItem key="index"><NavLink exact to="/">首页</NavLink></MenuItem>
-              <MenuItem key="produce"><NavLink to="/produce">产品专栏</NavLink></MenuItem> 
+              <MenuItem key="produce"><NavLink to="/produce">产品</NavLink></MenuItem> 
               <MenuItem key="auction"><NavLink to="/auction">拍卖</NavLink></MenuItem>
               <MenuItem key="partner"><NavLink to="/paterns">商业伙伴</NavLink></MenuItem>
               <MenuItem key="news"><NavLink to="/news">时讯速览</NavLink></MenuItem>
-              <MenuItem key="careers"><NavLink to="/career">招贤纳士</NavLink></MenuItem>
+              <MenuItem key="careers"><NavLink to="/career">招聘</NavLink></MenuItem>
               <MenuItem key="about"><NavLink to="/aboutUs">关于我们</NavLink></MenuItem>
             </Menu>
           </Header>
