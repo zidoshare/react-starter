@@ -1,18 +1,18 @@
 {
-  "name": "react-env",
-  "version": "1.0.0",
-  "description": "",
+  "name": "react-starter",
+  "version": "1.0.2",
+  "description": "react 最新脚手架",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server",
     "build": "npm run clean && cross-env NODE_ENV=production webpack --progress --colors",
     "lint": "eslint app",
-    "clean": "rimraf dist/*"
+    "clean": "rimraf dist/*",
+    "analyz": "NODE_ENV=production npm_config_report=true npm run build"
   },
-  "author": "",
+  "author": "zido",
   "license": "ISC",
   "devDependencies": {
-    "async-foreach": "^0.1.3",
     "babel-core": "^6.23.1",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.4.0",
@@ -34,7 +34,6 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.0",
-    "express": "^4.15.2",
     "extract-text-webpack-plugin": "^2.1.0",
     "html-loader": "^0.4.5",
     "html-webpack-plugin": "^2.28.0",
@@ -43,6 +42,7 @@
     "redux-devtools": "^3.3.2",
     "rimraf": "^2.6.1",
     "webpack": "^2.2.1",
+    "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.4.1"
   },
   "browserslist": [
@@ -52,6 +52,7 @@
   "dependencies": {
     "antd": "^2.12.6",
     "css-loader": "^0.26.4",
+    "enquire.js": "^2.1.6",
     "file-loader": "^0.10.1",
     "html-loader": "^0.4.5",
     "json-loader": "^0.5.4",
@@ -67,13 +68,21 @@
     "rc-queue-anim": "^0.12.6",
     "rc-scroll-anim": "^1.0.3",
     "rc-tween-one": "^1.0.4",
-    "react": "~15.4.2",
-    "react-dom": "~15.4.2",
-    "react-redux": "~5.0.3",
-    "react-router": "~3.0.2",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-router-dom": "^4.1.2",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.13.2",
     "url-loader": "^0.5.8",
     "whatwg-fetch": "^2.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zidoshare/react-starter.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/zidoshare/react-starter/issues"
+  },
+  "homepage": "https://github.com/zidoshare/react-starter#readme"
 }

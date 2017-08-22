@@ -1,0 +1,52 @@
+.nav{
+  line-height: 64px;
+  float: right;
+  text-align: center;
+  @media screen and (min-width: 768px){
+    a{
+      position: relative;
+      width:48px;
+      color: white !important;
+    }
+    a::after{
+      position: absolute;
+      content: "";
+      width: 88px;
+      height: 3px;
+      background: transparent;
+      left:-20px;
+      bottom: 0;
+      transition: all .3s ease-in-out;
+
+    }
+    a.active::after{
+      background: #0B619F;
+    }
+    li:hover{
+      a::after{
+        background: #108ee9;
+      }
+    }
+  }
+}
+
+.nav-logo{
+  line-height: 64px;
+  height: 64px;
+  float: left;
+  color:white;
+  font-size:18px;
+  img{
+    height: 100%;
+    padding:8px;
+  }
+  >li{
+    float: left;
+    height: 100%;
+    margin-right:10px; 
+  }
+}
+
+.nav-logo,.nav-logo > li {
+  list-style: none;
+}

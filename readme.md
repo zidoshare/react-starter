@@ -11,6 +11,9 @@
 * 生产环境使用命令
         npm run build
 
+* 打包模块大小分析
+        npm run analyz
+
 ## 特性
 
 作为例子，内置antd以及ant motion。antd 已实现按需加载，大幅减少体积

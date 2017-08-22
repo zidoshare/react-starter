@@ -16,6 +16,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const extractCss = new ExtractTextPlugin('style/[name]-css-[hash:6].css')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+
+var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const {existsSync} = require('fs')
 const rootPath = path.resolve(__dirname)
 const srcPath = path.join(rootPath, 'src')
@@ -60,10 +62,7 @@ if (isDev) {
     vendor: [
       'react',
       'react-dom',
-      'redux',
-      'react-redux',
-      'redux-thunk',
-      'react-router',
+      'react-router-dom',
     ]
   }
 }
@@ -85,6 +84,7 @@ if (isDev) {
       inject: 'body',
       favicon:path.join(imagePath,'Meeting.png'),
     }),
+    new BundleAnalyzerPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     // stataic目录下静态资源的复制
     new CopyWebpackPlugin([

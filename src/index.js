@@ -9,8 +9,8 @@ const Root = document.getElementById( 'root' )
 const isDev = !(process.env.NODE_ENV === 'development')
 
 let render = () => {
-  const Routes = require( './routes/index' ).default
-  ReactDOM.render( <AppContainer><Routes/></AppContainer>, Root )
+  const App = require( './app/index' ).default
+  ReactDOM.render( <AppContainer><App/></AppContainer>, Root )
 }
 
 if ( isDev ) {
@@ -40,7 +40,7 @@ if ( isDev ) {
     }
 
     // Setup hot module replacement
-    module.hot.accept( './routes/index', () => setImmediate( () => {
+    module.hot.accept( './app/index', () => setImmediate( () => {
       ReactDOM.unmountComponentAtNode( Root )
       render()
     } )
