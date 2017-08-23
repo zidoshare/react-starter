@@ -1,6 +1,10 @@
 # react-starter
 
 
+## 概览
+
+* 如需查看如何使用，请关注项目[cyd-view](https://github.com/zidoshare/cyd-view)开源前端项目
+
 * 使用最新的react和webpack构建的脚手架
 
 
