@@ -1,0 +1,74 @@
+
+.banner-item{
+  .slick-slide{
+    background-position: center;
+    background-size: cover;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+  }
+  @media screen and (min-width:768px){
+    .slick-slide{
+      min-height:100%;
+      height:100vh;
+      width:100%;
+    }
+  }
+
+@media screen and (max-width:767px){
+  .slick-slide{
+    width:100%;
+    height:150px;
+  }
+}
+}
+
+
+.ant-carousel .slick-dots{
+  li{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin: 0 6px;
+    padding: 0;
+    button{
+      height:6px;
+      width:36px;
+    }
+  }
+  li.slick-active{
+    button{
+      width:36px;
+      height:6px;
+      background: orangered;
+    }
+  }
+}
+
+.folder{
+  padding:20px;
+  min-height:500px;
+  @media screen and (max-width:767px) {
+    .folder-title{
+      margin:20px auto !important;
+    }
+  }
+  .folder-title{
+    width:300px;
+    margin:80px auto 40px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #D1D1D1;
+    position: relative;
+  }
+}
+.car-item{
+  -webkit-user-drag: none;
+  user-select: none;
+  width:65%;
+  margin:auto;
+  .bg-center{
+    margin:5px;
+    padding:2px;
+    border: 1px solid #e3e3e3;
+  }
+}

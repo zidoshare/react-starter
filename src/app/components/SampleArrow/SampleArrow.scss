@@ -1,0 +1,37 @@
+.ant-carousel .sample-arrow,.sample-arrow{
+  font-size:30px ;
+  line-height: 50px;
+  color:white ;
+  transition: background .3s ease-in-out;
+  width:60px;
+  height:50px;
+  top:50%;
+  margin-top:-25px;
+  position: absolute;
+  cursor: pointer;
+  background: rgba(63, 63, 63, 0.60);
+  text-align: center;
+}
+
+.ant-carousel .sample-arrow:hover,.sample-arrow:hover{
+  color:white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.ant-carousel .slick-prev:before,.slick-prev:before{
+  content:"";
+}
+
+.ant-carousel .slick-next:before,.slick-next:before{
+  content:"";
+}
+
+.ant-carousel .slick-prev,.slick-prev{
+  left:0;
+  z-index:1;
+}
+
+.ant-carousel .slick-next,.slick-next{
+  right: 0;
+  z-index:1;
+}

@@ -1,16 +1,16 @@
 import React from 'react'
 // import { BrowserRouter as Router,Route} from 'react-router-dom'
 import enquire from 'enquire.js'
-import { Layout , Menu} from 'antd'
-const MenuItem = Menu.Item
+import { Layout } from 'antd'
 import {NavLink,BrowserRouter as Router,Route,Switch} from 'react-router-dom'
-const { Header, Content, Footer } = Layout
+import Nav,{Item} from './components/Nav'
+const { Content } = Layout
 
 import Home from './routes/Home'
+import Footer from './components/Footer'
 
 import logo from '../image/Meeting.png'
-import './style/core.scss'
-import './style/Nav.scss'
+import './style/core.less'
 export default class App extends React.Component{
   constructor(props){
     super(props)
@@ -39,44 +39,24 @@ export default class App extends React.Component{
     })
     /* eslint-enable no-unused-expressions */
   }
-  handleClick(){
-    
-  }
   render(){
+    const {isMode} = this.state
     return (
       <Router>
         <Layout>
-          <Header>
-            <ul className="nav-logo">
-              <li>
-                <img src={logo}/>
-              </li>
-              <li>
-                demo
-              </li>
-            </ul>
-            <Menu 
-              onClick={this.handleClick.bind(this)}
-              selectedKeys={[this.state.current]}
-              mode="horizontal"
-              theme="dark"
-              className="nav"
-            >
-              <MenuItem key="index"><NavLink exact to="/">首页</NavLink></MenuItem>
-              <MenuItem key="produce"><NavLink to="/produce">产品</NavLink></MenuItem> 
-              <MenuItem key="auction"><NavLink to="/auction">拍卖</NavLink></MenuItem>
-              <MenuItem key="partner"><NavLink to="/paterns">商业伙伴</NavLink></MenuItem>
-              <MenuItem key="news"><NavLink to="/news">时讯速览</NavLink></MenuItem>
-              <MenuItem key="careers"><NavLink to="/career">招聘</NavLink></MenuItem>
-              <MenuItem key="about"><NavLink to="/aboutUs">关于我们</NavLink></MenuItem>
-            </Menu>
-          </Header>
-          <Content>
+          <Nav logo={logo} mark="公司logo" isMode={isMode}>
+            <Item key="index"><NavLink exact to="/">首页</NavLink></Item>
+            <Item key="p1"><NavLink to="/p1">页面1</NavLink></Item> 
+            <Item key="p2"><NavLink to="/p2">页面2</NavLink></Item>
+            <Item key="p3"><NavLink to="/p3">页面3</NavLink></Item>
+            <Item key="p4"><NavLink to="/p4">页面4</NavLink></Item>
+          </Nav>
+          <Content style={{marginTop:64}}>
             <Switch>
-              <Route exact path="/" component={Home}/>
+              <Route exact path="/" render={props => <Home {...props} isMode={isMode}/>}/>
             </Switch>
           </Content>
-          <Footer/>
+          <Footer isMode={isMode}/>
         </Layout>
       </Router>  
     )

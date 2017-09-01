@@ -17,7 +17,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const extractCss = new ExtractTextPlugin('style/[name]-css-[hash:6].css')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
-var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const {existsSync} = require('fs')
 const rootPath = path.resolve(__dirname)
 const srcPath = path.join(rootPath, 'src')
@@ -116,7 +116,8 @@ const styleLoaders = {
     loader: 'css-loader',
     options: {
       //将css进行hash编码，保证模块性，保证单独使用，而不会污染全局
-      // modules: true
+      // modules: true,
+      minimize: true //css压缩
     }
   },
   postcss: {
