@@ -56,7 +56,7 @@ export default class App extends React.Component{
               <Route exact path="/" render={props => <Home {...props} isMode={isMode}/>}/>
             </Switch>
           </Content>
-          <Footer isMode={isMode}/>
+          <Footer/>
         </Layout>
       </Router>  
     )
